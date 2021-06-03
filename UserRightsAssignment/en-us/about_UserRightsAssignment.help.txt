@@ -1,0 +1,11 @@
+﻿TOPIC
+	about_UserRightsAssignment
+	
+SHORT DESCRIPTION
+	Explains how to use the UserRightsAssignment powershell module
+	
+LONG DESCRIPTION
+	<Insert Content here>
+
+KEYWORDS
+	UserRightsAssignment
