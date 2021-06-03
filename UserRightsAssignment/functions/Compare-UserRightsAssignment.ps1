@@ -1,4 +1,4 @@
-function Compare-UserRightsAssignment {
+﻿function Compare-UserRightsAssignment {
     <#
     .SYNOPSIS
         Compare two sets of User Rights Assignments and generate the diff.

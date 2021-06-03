@@ -1,4 +1,4 @@
-function ConvertTo-UserRightsAssignmentSummary {
+﻿function ConvertTo-UserRightsAssignmentSummary {
     <#
     .SYNOPSIS
         Create a summary result of all user rights assignments.

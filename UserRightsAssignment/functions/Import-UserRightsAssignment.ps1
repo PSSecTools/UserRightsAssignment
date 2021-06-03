@@ -1,4 +1,4 @@
-function Import-UserRightsAssignment {
+﻿function Import-UserRightsAssignment {
     <#
     .SYNOPSIS
         Reads a GP Results XML file and processes any applicable UserRightsAssignments.
@@ -17,6 +17,7 @@ function Import-UserRightsAssignment {
 
         Reads the User Rights Assignment settings from all XML files in the current folder.
     #>
+    [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSAvoidUsingEmptyCatchBlock', '')]
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
@@ -28,7 +29,7 @@ function Import-UserRightsAssignment {
         foreach ($pathItem in $Path) {
             try { [xml]$xml = Get-Content -Path $pathItem -ErrorAction Stop }
             catch {
-                Write-Error $_
+                Write-PSFMessage -Level Error -Message "Error reading XML file: $pathItem" -ErrorRecord $_ -PSCmdlet $PSCmdlet -EnableException $true
                 continue
             }
 

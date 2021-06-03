@@ -1,4 +1,4 @@
-function Get-UserRightsAssignment {
+﻿function Get-UserRightsAssignment {
     <#
     .SYNOPSIS
         Execute gpresult on the target computer and get a list of effective user rights assignments.
@@ -14,6 +14,10 @@ function Get-UserRightsAssignment {
     
     .PARAMETER Credential
         The credentials to use for connecting to the remote host.
+
+	.PARAMETER EnableException
+		This parameters disables user-friendly warnings and enables the throwing of exceptions.
+		This is less user friendly, but allows catching exceptions in calling scripts.
     
     .EXAMPLE
         PS C:\> Get-UserRightsAssignment

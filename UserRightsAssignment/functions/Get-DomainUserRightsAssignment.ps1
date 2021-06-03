@@ -1,4 +1,4 @@
-function Get-DomainUserRightsAssignment {
+﻿function Get-DomainUserRightsAssignment {
     <#
     .SYNOPSIS
         Scan all DCs of a domain for User Rights Assignments.
